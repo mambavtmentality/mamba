@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0910;
+  --foreground: #f4efe4;
+  --mamba-purple: #52217f;
+  --mamba-purple-soft: #7140a3;
+  --mamba-gold: #c69a32;
+  --mamba-gold-soft: #e3c37c;
+  --mamba-charcoal: #14111b;
+  --mamba-cream: #f8f3e7;
+  --muted: #cdbeda;
+  --card: #191326;
+  --card-foreground: #f6f3ed;
+  --border-subtle: rgb(198 154 50 / 35%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-mamba-purple: var(--mamba-purple);
+  --color-mamba-purple-soft: var(--mamba-purple-soft);
+  --color-mamba-gold: var(--mamba-gold);
+  --color-mamba-gold-soft: var(--mamba-gold-soft);
+  --color-mamba-charcoal: var(--mamba-charcoal);
+  --color-mamba-cream: var(--mamba-cream);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body), sans-serif;
+    background:
+      radial-gradient(1150px 660px at 11% -8%, rgb(81 34 126 / 42%), transparent 58%),
+      radial-gradient(780px 440px at 89% -6%, rgb(198 154 50 / 14%), transparent 48%),
+      linear-gradient(180deg, #0b0910 0%, #120e1d 40%, #0e0b15 100%);
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-6 py-20 md:px-10 md:py-24 lg:px-16 lg:py-28;
+  }
+
+  .gold-border {
+    border: 1px solid var(--border-subtle);
+  }
+
+  .card-glow {
+    box-shadow:
+      0 10px 40px rgb(0 0 0 / 34%),
+      0 0 0 1px rgb(198 154 50 / 10%) inset,
+      inset 0 1px 0 rgb(255 255 255 / 5%);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(120deg, #f1d79a 0%, #c9a84c 35%, #f5deb0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .surface-blur {
+    backdrop-filter: blur(5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
