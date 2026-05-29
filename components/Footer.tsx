@@ -29,7 +29,7 @@ export function Footer() {
           <p className="mb-3 text-xs uppercase tracking-[0.24em] text-mamba-gold-soft/90">Contact</p>
           <div className="space-y-2 text-sm text-muted">
             <p>info@mambavtmentality.com</p>
-            <p>(555) 000-0000</p>
+            <p>802-287-1788</p>
             <p>Vermont, USA</p>
           </div>
         </div>
