@@ -13,7 +13,7 @@ export function CTA() {
           quality into your goals, projects, and business.
         </p>
         <div className="mt-8">
-          <Button href="mailto:info@mambavtmentality.com">Contact Mamba VT Mentality</Button>
+          <Button href="mailto:mambavtmentality@gmail.com">Contact Mamba VT Mentality</Button>
         </div>
       </div>
     </section>
