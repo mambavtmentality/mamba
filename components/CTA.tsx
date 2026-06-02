@@ -20,6 +20,7 @@ export function CTA() {
           method="POST"
           className="grid gap-4"
         >
+          <h3 className="font-display text-2xl text-mamba-cream">Contact Us</h3>
           <input type="hidden" name="_subject" value="Website Inquiry" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
@@ -62,6 +63,20 @@ export function CTA() {
               name="phone"
               autoComplete="tel"
             />
+          </label>
+
+          <label className="grid gap-2 text-sm text-mamba-cream">
+            Preferred Contact Method
+            <select
+              className="min-h-12 rounded-lg border border-mamba-gold/25 bg-mamba-charcoal/70 px-4 text-mamba-cream outline-none transition-colors focus:border-mamba-gold"
+              name="preferred_contact_method"
+              defaultValue="Email"
+              required
+            >
+              <option value="Email">Email</option>
+              <option value="Text">Text</option>
+              <option value="Call">Call</option>
+            </select>
           </label>
 
           <label className="grid gap-2 text-sm text-mamba-cream">
