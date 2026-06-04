@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#services", label: "Technology" },
+  { href: "#services", label: "Divisions" },
   { href: "#why-us", label: "Model" },
 ];
 
@@ -14,7 +14,7 @@ export function TopNav() {
         <a href="#home" className="flex items-center gap-3">
           <LogoEmblem className="h-9 w-9 shrink-0" />
           <span className="hidden text-sm font-medium tracking-wide text-mamba-cream sm:inline">
-            Mamba VT Recovery
+            Mamba VT Mentality
           </span>
         </a>
 

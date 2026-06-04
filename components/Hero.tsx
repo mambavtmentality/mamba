@@ -16,17 +16,17 @@ export function Hero() {
         >
           <LogoEmblem priority className="mx-auto w-full max-w-[300px] md:max-w-[420px] lg:max-w-[520px]" />
           <p className="text-xs uppercase tracking-[0.35em] text-mamba-gold-soft/80 md:text-sm">
-            A Division of Mamba VT Mentality LLC
+            Mindset. Discipline. Purpose.
           </p>
           <h1 className="font-display text-4xl leading-tight text-mamba-cream md:text-6xl lg:text-7xl">
-            Mamba VT Recovery & Performance Center
+            Mamba VT Mentality LLC
           </h1>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted md:text-lg">
-            A technology-driven wellness facility combining adaptive strength training, oxygen
-            conditioning, infrared sauna, cold plunge, and recovery systems in one complete visit.
+            A scalable umbrella company built around personal development, performance, wellness,
+            recovery, and professional services under one recognizable Vermont brand.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row">
-            <Button href="#services">Explore the Experience</Button>
+            <Button href="#services">Explore Divisions</Button>
             <Button href="#contact" variant="secondary">
               Request Information
             </Button>

@@ -1,38 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Activity, Dumbbell, Flame, Snowflake, Waves, Zap } from "lucide-react";
+import {
+  Briefcase,
+  Car,
+  Dumbbell,
+  HeartPulse,
+  Paintbrush,
+  PersonStanding,
+  Sparkles,
+  Waves,
+} from "lucide-react";
 
-const technologies = [
+const divisions = [
   {
-    title: "ARX Adaptive Resistance",
-    description: "Computerized strength training designed to create efficient, measurable effort in minutes.",
+    title: "Sports Training",
+    description: "Performance-focused coaching for athletes and active clients building skill, confidence, and discipline.",
     icon: Dumbbell,
   },
   {
-    title: "LiveO2 Conditioning",
-    description: "Altitude-inspired oxygen conditioning that supports cardio capacity and performance work.",
-    icon: Activity,
+    title: "Health & Fitness Coaching",
+    description: "Structured coaching for strength, conditioning, wellness habits, and long-term personal progress.",
+    icon: HeartPulse,
   },
   {
-    title: "Infrared Sauna",
-    description: "A recovery-focused heat experience for relaxation, restoration, and post-session reset.",
-    icon: Flame,
+    title: "Life Coaching & Development",
+    description: "Personal development support rooted in mindset, accountability, purpose, and forward motion.",
+    icon: PersonStanding,
   },
   {
-    title: "Cold Plunge",
-    description: "Cold exposure for resilience, recovery, and a sharper finish to the performance circuit.",
-    icon: Snowflake,
+    title: "Painting Services",
+    description: "Residential and commercial painting delivered with clean presentation and premium service standards.",
+    icon: Paintbrush,
   },
   {
-    title: "Vibration Plate",
-    description: "Movement support for circulation, activation, balance, warm-up, and recovery.",
-    icon: Zap,
-  },
-  {
-    title: "Signature Session",
-    description: "Vibration plate, dynamic warm-up, ARX, LiveO2, infrared sauna, and optional cold plunge.",
+    title: "Power Washing",
+    description: "Exterior cleaning services built to restore curb appeal and protect property presentation.",
     icon: Waves,
+  },
+  {
+    title: "Car Detailing",
+    description: "Interior and exterior detailing for clients who value precision, care, and a finished look.",
+    icon: Car,
+  },
+  {
+    title: "General Business Services",
+    description: "Flexible professional support services that create additional revenue streams under the Mamba VT brand.",
+    icon: Briefcase,
+  },
+  {
+    title: "Recovery & Performance Center",
+    description: "A technology-driven wellness division combining ARX, LiveO2, sauna, cold plunge, and vibration plate systems.",
+    icon: Sparkles,
   },
 ];
 
@@ -41,23 +60,23 @@ export function Services() {
     <section id="services" className="section-padding">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 space-y-4 md:mb-12">
-          <p className="text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Technology</p>
+          <p className="text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Business Divisions</p>
           <h2 className="font-display text-3xl text-mamba-cream md:text-4xl">
-            Performance and Recovery in One Visit
+            Multiple Revenue Streams, One Recognizable Brand
           </h2>
           <p className="max-w-2xl text-muted">
-            The business plan centers Mamba VT around a complete client experience that combines
-            strength, conditioning, recovery, and wellness technology under one roof.
+            The new business narrative positions Mamba VT Mentality LLC as a scalable umbrella
+            company serving personal development, performance, wellness, and professional-service markets.
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {technologies.map((technology, index) => {
-            const Icon = technology.icon;
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {divisions.map((division, index) => {
+            const Icon = division.icon;
 
             return (
               <motion.article
-                key={technology.title}
+                key={division.title}
                 initial={{ opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
@@ -68,8 +87,8 @@ export function Services() {
                 <div className="mb-5 inline-flex rounded-full border border-mamba-gold/50 bg-mamba-purple/45 p-2.5 text-mamba-gold-soft">
                   <Icon size={20} />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-mamba-cream">{technology.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{technology.description}</p>
+                <h3 className="mb-2 text-lg font-semibold text-mamba-cream">{division.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{division.description}</p>
               </motion.article>
             );
           })}

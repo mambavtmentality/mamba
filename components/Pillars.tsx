@@ -1,38 +1,76 @@
-import { BarChart3, Repeat, Target } from "lucide-react";
+import { Activity, BarChart3, Flame, Repeat, Target, Zap } from "lucide-react";
+
+const recoveryStack = [
+  {
+    title: "ARX + LiveO2",
+    description: "Adaptive strength training and oxygen conditioning for efficient performance work.",
+    icon: Activity,
+  },
+  {
+    title: "Sauna + Cold Plunge",
+    description: "Infrared heat and optional cold exposure to support recovery, resilience, and reset.",
+    icon: Flame,
+  },
+  {
+    title: "Vibration Recovery",
+    description: "Vibration plate systems for circulation, activation, balance, warm-up, and recovery.",
+    icon: Zap,
+  },
+];
 
 const modelHighlights = [
   {
-    title: "Target Clients",
-    description: "Athletes, busy professionals, active adults, wellness-focused individuals, and clients seeking measurable results.",
+    title: "Target Market",
+    description: "Athletes, active adults, busy professionals, wellness-focused individuals, and clients seeking measurable improvements.",
     icon: Target,
   },
   {
-    title: "Membership Model",
-    description: "Recovery, Performance, and Elite Athlete memberships create recurring access and predictable growth.",
+    title: "Membership Options",
+    description: "Recovery, Performance, and Elite Athlete memberships support recurring access and scalable revenue.",
     icon: Repeat,
   },
   {
     title: "Growth Plan",
-    description: "Launch the flagship location, build memberships, expand services, and evaluate a second location.",
+    description: "Launch a flagship location, build memberships, expand services and partnerships, then grow across Vermont and beyond.",
     icon: BarChart3,
   },
 ];
 
-const memberships = ["Recovery", "Performance", "Elite Athlete"];
+const memberships = ["Recovery $99-$149", "Performance $199-$299", "Elite Athlete $399-$599"];
 
 export function Pillars() {
   return (
     <section id="why-us" className="section-padding">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 space-y-3 md:mb-12">
-          <p className="text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Business Model</p>
+          <p className="text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">
+            Recovery & Performance Center
+          </p>
           <h2 className="font-display text-3xl text-mamba-cream md:text-4xl">
-            Built for Access, Results, and Recurring Relationships
+            A Technology-Driven Wellness Division
           </h2>
           <p className="max-w-2xl text-muted">
-            The plan is designed around efficient sessions, high-value equipment, and membership
-            options that support recovery, performance, and athlete-level training needs.
+            The Recovery & Performance Center solves the time and access problem by combining
+            training, cardiovascular conditioning, recovery, and performance enhancement into one streamlined experience.
           </p>
+        </div>
+
+        <div className="mb-8 grid gap-5 md:grid-cols-3">
+          {recoveryStack.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article
+                key={item.title}
+                className="rounded-2xl border border-mamba-gold/25 bg-[linear-gradient(148deg,rgba(82,33,127,0.32),rgba(20,17,27,0.94),rgba(198,154,50,0.06))] p-6 card-glow"
+              >
+                <div className="mb-5 inline-flex rounded-full border border-mamba-gold/35 bg-mamba-charcoal/70 p-2 text-mamba-gold">
+                  <Icon size={18} />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-mamba-cream">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{item.description}</p>
+              </article>
+            );
+          })}
         </div>
 
         <div className="mb-5 flex flex-wrap gap-3">
@@ -41,7 +79,7 @@ export function Pillars() {
               key={membership}
               className="rounded-full border border-mamba-gold/35 bg-mamba-purple/25 px-4 py-2 text-sm text-mamba-cream"
             >
-              {membership} Membership
+              {membership}/month
             </span>
           ))}
         </div>

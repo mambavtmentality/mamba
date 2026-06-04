@@ -14,13 +14,13 @@ const bodyFont = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Mamba VT Recovery & Performance Center",
+  title: "Mamba VT Mentality LLC",
   description:
-    "A technology-driven Vermont wellness center combining adaptive strength training, oxygen conditioning, sauna, cold plunge, and recovery systems.",
+    "A scalable Vermont brand built around personal development, performance, wellness, recovery, and professional services.",
   openGraph: {
-    title: "Mamba VT Recovery & Performance Center",
+    title: "Mamba VT Mentality LLC",
     description:
-      "Mindset. Discipline. Purpose. A complete recovery and performance experience built around measurable results.",
+      "Mindset. Discipline. Purpose. A multi-division brand built for performance, wellness, and premium service.",
     type: "website",
   },
 };

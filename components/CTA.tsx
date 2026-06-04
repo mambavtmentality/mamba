@@ -7,11 +7,11 @@ export function CTA() {
         <div>
           <p className="mb-3 text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Contact</p>
           <h2 className="font-display text-3xl leading-tight text-mamba-cream md:text-5xl">
-            Bring Mamba VT Recovery & Performance Center to life.
+            Connect with Mamba VT Mentality LLC.
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            Reach out about memberships, athlete performance sessions, wellness access, or the
-            funding opportunity behind the flagship Vermont location.
+            Reach out about training, coaching, professional services, recovery center memberships,
+            partnerships, or the investment opportunity behind the next stage of growth.
           </p>
         </div>
 

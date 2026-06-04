@@ -7,16 +7,16 @@ export function Footer() {
         <div className="space-y-3">
           <LogoEmblem className="w-full max-w-[168px]" />
           <p className="font-display text-xl text-mamba-cream">
-            Mamba VT Recovery & Performance Center
+            Mamba VT Mentality LLC
           </p>
-          <p className="text-sm text-muted">A division of Mamba VT Mentality LLC.</p>
+          <p className="text-sm text-muted">Mindset. Discipline. Purpose.</p>
         </div>
 
         <div>
           <p className="mb-3 text-xs uppercase tracking-[0.24em] text-mamba-gold-soft/90">Navigate</p>
           <nav className="flex flex-col gap-2 text-sm text-muted">
             <a className="transition-colors hover:text-mamba-cream" href="#services">
-              Technology
+              Divisions
             </a>
             <a className="transition-colors hover:text-mamba-cream" href="#why-us">
               Business Model
