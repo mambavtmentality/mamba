@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/Button";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#services", label: "Services" },
-  { href: "#why-us", label: "Why Us" },
+  { href: "#services", label: "Technology" },
+  { href: "#why-us", label: "Model" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -15,7 +15,7 @@ export function TopNav() {
         <a href="#home" className="flex items-center gap-3">
           <LogoEmblem className="h-9 w-9 shrink-0" />
           <span className="hidden text-sm font-medium tracking-wide text-mamba-cream sm:inline">
-            Mamba VT Mentality LLC
+            Mamba VT Recovery
           </span>
         </a>
 
@@ -32,7 +32,7 @@ export function TopNav() {
         </nav>
 
         <Button href="#contact" className="px-4 py-2 text-xs sm:text-sm">
-          Get Started
+          Contact Us
         </Button>
       </div>
     </header>

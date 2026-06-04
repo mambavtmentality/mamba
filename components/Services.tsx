@@ -1,43 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Car, Compass, Droplets, Dumbbell, HeartPulse, Paintbrush } from "lucide-react";
+import { Activity, Dumbbell, Flame, Snowflake, Waves, Zap } from "lucide-react";
 
-const services = [
+const technologies = [
   {
-    title: "Sports Training",
-    description: "Performance-focused coaching to improve technique, confidence, and execution.",
+    title: "ARX Adaptive Resistance",
+    description: "Computerized strength training designed to create efficient, measurable effort in minutes.",
     icon: Dumbbell,
   },
   {
-    title: "Health & Fitness",
-    description: "Structured routines for long-term strength, conditioning, and overall wellness.",
-    icon: HeartPulse,
+    title: "LiveO2 Conditioning",
+    description: "Altitude-inspired oxygen conditioning that supports cardio capacity and performance work.",
+    icon: Activity,
   },
   {
-    title: "Life Coaching",
-    description: "Goal-centered guidance built around accountability, clarity, and personal momentum.",
-    icon: Compass,
+    title: "Infrared Sauna",
+    description: "A recovery-focused heat experience for relaxation, restoration, and post-session reset.",
+    icon: Flame,
   },
   {
-    title: "Painting",
-    description: "Professional paint services with clean finishes and dependable project delivery.",
-    icon: Paintbrush,
+    title: "Cold Plunge",
+    description: "Cold exposure for resilience, recovery, and a sharper finish to the performance circuit.",
+    icon: Snowflake,
   },
   {
-    title: "Power Washing",
-    description: "Thorough surface cleaning that restores curb appeal and professional presentation.",
-    icon: Droplets,
+    title: "Vibration Plate",
+    description: "Movement support for circulation, activation, balance, warm-up, and recovery.",
+    icon: Zap,
   },
   {
-    title: "Car Detailing",
-    description: "Precision interior and exterior detailing that elevates your vehicle's appearance.",
-    icon: Car,
-  },
-  {
-    title: "Business Services",
-    description: "Scalable support services designed to help operations run efficiently and reliably.",
-    icon: Briefcase,
+    title: "Signature Session",
+    description: "Vibration plate, dynamic warm-up, ARX, LiveO2, infrared sauna, and optional cold plunge.",
+    icon: Waves,
   },
 ];
 
@@ -46,21 +41,23 @@ export function Services() {
     <section id="services" className="section-padding">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 space-y-4 md:mb-12">
-          <p className="text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Services</p>
-          <h2 className="font-display text-3xl text-mamba-cream md:text-4xl">Built to Serve with Excellence</h2>
+          <p className="text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Technology</p>
+          <h2 className="font-display text-3xl text-mamba-cream md:text-4xl">
+            Performance and Recovery in One Visit
+          </h2>
           <p className="max-w-2xl text-muted">
-            From mindset-driven training and life coaching to high-quality field services, each
-            division is designed to produce clear, measurable results.
+            The business plan centers Mamba VT around a complete client experience that combines
+            strength, conditioning, recovery, and wellness technology under one roof.
           </p>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
-            const Icon = service.icon;
+          {technologies.map((technology, index) => {
+            const Icon = technology.icon;
 
             return (
               <motion.article
-                key={service.title}
+                key={technology.title}
                 initial={{ opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
@@ -71,8 +68,8 @@ export function Services() {
                 <div className="mb-5 inline-flex rounded-full border border-mamba-gold/50 bg-mamba-purple/45 p-2.5 text-mamba-gold-soft">
                   <Icon size={20} />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-mamba-cream">{service.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{service.description}</p>
+                <h3 className="mb-2 text-lg font-semibold text-mamba-cream">{technology.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{technology.description}</p>
               </motion.article>
             );
           })}

@@ -5,13 +5,13 @@ export function CTA() {
     <section id="contact" className="section-padding">
       <div className="mx-auto grid max-w-6xl gap-8 rounded-3xl border border-mamba-gold/35 bg-[linear-gradient(138deg,rgba(82,33,127,0.65),rgba(20,17,27,0.96),rgba(198,154,50,0.22))] p-8 card-glow lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
         <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Start Today</p>
+          <p className="mb-3 text-xs uppercase tracking-[0.32em] text-mamba-gold-soft/80">Contact</p>
           <h2 className="font-display text-3xl leading-tight text-mamba-cream md:text-5xl">
-            Build with purpose. Move with discipline.
+            Bring Mamba VT Recovery & Performance Center to life.
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            Partner with Mamba VT Mentality LLC to bring disciplined execution and premium service
-            quality into your goals, projects, and business.
+            Reach out about memberships, athlete performance sessions, wellness access, or the
+            funding opportunity behind the flagship Vermont location.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export function CTA() {
           className="grid gap-4"
         >
           <h3 className="font-display text-2xl text-mamba-cream">Contact Us</h3>
-          <input type="hidden" name="_subject" value="Website Inquiry" />
+          <input type="hidden" name="_subject" value="Mamba VT Website Inquiry" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input
@@ -84,6 +84,7 @@ export function CTA() {
             <textarea
               className="min-h-36 resize-y rounded-lg border border-mamba-gold/25 bg-mamba-charcoal/70 px-4 py-3 text-mamba-cream outline-none transition-colors placeholder:text-muted/70 focus:border-mamba-gold"
               name="message"
+              placeholder="Tell us what you are interested in."
               required
             />
           </label>
