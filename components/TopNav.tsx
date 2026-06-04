@@ -10,7 +10,7 @@ const navLinks = [
 
 export function TopNav() {
   return (
-    <header className="sticky top-0 z-40 px-4 pt-4 md:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 rounded-2xl border border-mamba-gold/30 bg-[linear-gradient(130deg,rgba(82,33,127,0.26),rgba(20,17,27,0.86))] px-4 py-3 surface-blur md:px-6">
         <a href="#home" className="flex items-center gap-3">
           <LogoEmblem className="h-9 w-9 shrink-0" />

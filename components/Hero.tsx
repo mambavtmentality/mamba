@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
-    <section id="home" className="section-padding relative overflow-hidden pt-14 md:pt-20">
+    <section id="home" className="section-padding relative overflow-hidden pt-32 md:pt-36">
       <div className="mx-auto flex min-h-[90vh] w-full max-w-6xl flex-col items-center justify-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
