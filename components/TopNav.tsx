@@ -5,7 +5,6 @@ const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Technology" },
   { href: "#why-us", label: "Model" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export function TopNav() {
