@@ -14,13 +14,13 @@ type ButtonProps =
   | (BaseProps & { href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>);
 
 const baseStyles =
-  "inline-flex min-h-11 items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mamba-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-mamba-charcoal";
+  "inline-flex min-h-11 items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-aion-purple/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "border border-mamba-gold/70 bg-[linear-gradient(160deg,rgba(198,154,50,0.14),rgba(20,17,27,0.95))] text-mamba-cream shadow-[0_8px_24px_rgb(0_0_0_/0.35)] hover:-translate-y-0.5 hover:border-mamba-gold-soft hover:shadow-[0_14px_38px_rgb(198_154_50_/0.26)]",
+    "bg-[linear-gradient(135deg,rgba(124,58,237,0.9),rgba(245,185,66,0.85))] text-black shadow-[0_8px_24px_rgb(124_58_237_/0.25)] hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgb(245_185_66_/0.2)]",
   secondary:
-    "border border-mamba-purple-soft/70 bg-mamba-purple/30 text-mamba-cream hover:-translate-y-0.5 hover:border-mamba-gold/55 hover:bg-mamba-purple/45",
+    "border border-white/15 bg-white/5 text-foreground hover:-translate-y-0.5 hover:border-aion-purple-soft/50 hover:bg-white/8",
 };
 
 function mergeClasses(...classes: Array<string | undefined>) {

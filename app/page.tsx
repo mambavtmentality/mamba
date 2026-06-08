@@ -1,20 +1,26 @@
-import { BrandStatement } from "@/components/BrandStatement";
-import { CTA } from "@/components/CTA";
+import { AudienceSection } from "@/components/AudienceSection";
+import { ConceptSection } from "@/components/ConceptSection";
+import { EquipmentGrid } from "@/components/EquipmentGrid";
+import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
+import { FounderOffer } from "@/components/FounderOffer";
+import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Pillars } from "@/components/Pillars";
-import { Services } from "@/components/Services";
-import { TopNav } from "@/components/TopNav";
+import { MembershipPreview } from "@/components/MembershipPreview";
+import { ValidationCTA } from "@/components/ValidationCTA";
 
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
-      <TopNav />
+      <Header />
       <Hero />
-      <BrandStatement />
-      <Services />
-      <Pillars />
-      <CTA />
+      <FounderOffer />
+      <ConceptSection />
+      <EquipmentGrid />
+      <MembershipPreview />
+      <AudienceSection />
+      <ValidationCTA />
+      <FAQ />
       <Footer />
     </main>
   );

@@ -1,36 +1,34 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
-const displayFont = Cormorant_Garamond({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["600", "700"],
-});
-
-const bodyFont = Outfit({
+const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Mamba VT Mentality LLC",
+  title: "Aion Performance & Recovery | Founding Memberships",
   description:
-    "A scalable Vermont brand built around personal development, performance, wellness, recovery, and professional services.",
+    "A local boutique performance and recovery studio. Guided strength, oxygen conditioning, heat, cold, vibration, and disciplined wellness routines.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Mamba VT Mentality LLC",
-    description:
-      "Mindset. Discipline. Purpose. A multi-division brand built for performance, wellness, and premium service.",
+    title: "Aion Performance & Recovery",
+    description: "Train smarter. Recover deeper. Evolve daily.",
     type: "website",
     url: siteUrl,
-    siteName: "Mamba VT Mentality LLC",
+    siteName: "Aion Performance & Recovery",
+  },
+  icons: {
+    icon: "/AION_LOGO_ICON.png",
+    apple: "/AION_LOGO_ICON.png",
   },
 };
 
@@ -40,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} h-full`}>
+    <html lang="en" className={`${bodyFont.variable} h-full`}>
       <body className="min-h-full bg-background text-foreground antialiased">
         {children}
       </body>

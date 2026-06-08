@@ -1,44 +1,34 @@
-import { LogoEmblem } from "@/components/LogoEmblem";
+import { AionLogo } from "@/components/AionLogo";
 
 export function Footer() {
   return (
-    <footer className="section-padding pt-10">
-      <div className="mx-auto grid max-w-6xl gap-8 rounded-3xl border border-mamba-gold/30 bg-[linear-gradient(130deg,rgba(82,33,127,0.18),rgba(20,17,27,0.86))] p-8 surface-blur md:grid-cols-3">
-        <div className="space-y-3">
-          <LogoEmblem className="w-full max-w-[168px]" />
-          <p className="font-display text-xl text-mamba-cream">
-            Mamba VT Mentality LLC
-          </p>
-          <p className="text-sm text-muted">Mindset. Discipline. Purpose.</p>
-        </div>
-
-        <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-mamba-gold-soft/90">Navigate</p>
-          <nav className="flex flex-col gap-2 text-sm text-muted">
-            <a className="transition-colors hover:text-mamba-cream" href="#services">
-              Divisions
-            </a>
-            <a className="transition-colors hover:text-mamba-cream" href="#why-us">
-              Business Model
-            </a>
-            <a className="transition-colors hover:text-mamba-cream" href="#contact">
-              Contact
-            </a>
-          </nav>
-        </div>
-
-        <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-mamba-gold-soft/90">Contact</p>
-          <div className="space-y-2 text-sm text-muted">
-            <p>mambavtmentality@gmail.com</p>
-            <p>802-287-1788</p>
-            <p>Vermont, USA</p>
+    <footer className="section-padding border-t border-white/8 pt-12">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-8 md:grid-cols-3">
+          <div className="space-y-3">
+            <AionLogo variant="full" className="h-28 w-auto max-w-[200px]" />
+            <p className="text-sm text-aion-muted">Train smarter. Recover deeper. Evolve daily.</p>
+          </div>
+          <div>
+            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-aion-muted">Contact</p>
+            <p className="text-sm text-aion-muted">info@aionperformancerecovery.com</p>
+            <p className="text-sm text-aion-muted">(555) 000-0000</p>
+            <p className="text-sm text-aion-muted">Local studio — location coming soon</p>
+          </div>
+          <div>
+            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-aion-muted">Follow</p>
+            <p className="text-sm text-aion-muted">Instagram — coming soon</p>
+            <p className="text-sm text-aion-muted">Facebook — coming soon</p>
           </div>
         </div>
+        <p className="mt-10 border-t border-white/8 pt-6 text-center text-xs leading-relaxed text-aion-muted">
+          Aion Performance & Recovery provides general wellness, fitness, and recovery services. It
+          does not provide medical diagnosis or treatment.
+        </p>
+        <p className="mt-3 text-center text-xs text-aion-muted/70">
+          © {new Date().getFullYear()} Aion Performance & Recovery. All rights reserved.
+        </p>
       </div>
-      <p className="mx-auto mt-6 max-w-6xl px-4 text-center text-xs text-muted/85">
-        (c) {new Date().getFullYear()} Mamba VT Mentality LLC. All rights reserved.
-      </p>
     </footer>
   );
 }

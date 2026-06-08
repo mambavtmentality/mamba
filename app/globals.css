@@ -1,32 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0910;
-  --foreground: #f4efe4;
-  --mamba-purple: #52217f;
-  --mamba-purple-soft: #7140a3;
-  --mamba-gold: #c69a32;
-  --mamba-gold-soft: #e3c37c;
-  --mamba-charcoal: #14111b;
-  --mamba-cream: #f8f3e7;
-  --muted: #cdbeda;
-  --card: #191326;
-  --card-foreground: #f6f3ed;
-  --border-subtle: rgb(198 154 50 / 35%);
+  --background: #09090b;
+  --foreground: #fafafa;
+  --aion-charcoal: #111114;
+  --aion-gray: #1c1c21;
+  --aion-gray-soft: #27272a;
+  --aion-muted: #a1a1aa;
+  --aion-purple: #7c3aed;
+  --aion-purple-soft: #a78bfa;
+  --aion-yellow: #f5b942;
+  --aion-yellow-soft: #fde68a;
+  --card: #141417;
+  --border-subtle: rgb(255 255 255 / 8%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-mamba-purple: var(--mamba-purple);
-  --color-mamba-purple-soft: var(--mamba-purple-soft);
-  --color-mamba-gold: var(--mamba-gold);
-  --color-mamba-gold-soft: var(--mamba-gold-soft);
-  --color-mamba-charcoal: var(--mamba-charcoal);
-  --color-mamba-cream: var(--mamba-cream);
-  --color-muted: var(--muted);
+  --color-aion-charcoal: var(--aion-charcoal);
+  --color-aion-gray: var(--aion-gray);
+  --color-aion-gray-soft: var(--aion-gray-soft);
+  --color-aion-muted: var(--aion-muted);
+  --color-aion-purple: var(--aion-purple);
+  --color-aion-purple-soft: var(--aion-purple-soft);
+  --color-aion-yellow: var(--aion-yellow);
+  --color-aion-yellow-soft: var(--aion-yellow-soft);
   --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--aion-muted);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 }
@@ -39,9 +40,9 @@
   body {
     font-family: var(--font-body), sans-serif;
     background:
-      radial-gradient(1150px 660px at 11% -8%, rgb(81 34 126 / 42%), transparent 58%),
-      radial-gradient(780px 440px at 89% -6%, rgb(198 154 50 / 14%), transparent 48%),
-      linear-gradient(180deg, #0b0910 0%, #120e1d 40%, #0e0b15 100%);
+      radial-gradient(900px 500px at 15% -5%, rgb(124 58 237 / 18%), transparent 55%),
+      radial-gradient(700px 400px at 85% 0%, rgb(245 185 66 / 10%), transparent 50%),
+      linear-gradient(180deg, #09090b 0%, #0f0f12 50%, #09090b 100%);
     color: var(--foreground);
   }
 }
@@ -51,26 +52,28 @@
     @apply px-6 py-20 md:px-10 md:py-24 lg:px-16 lg:py-28;
   }
 
-  .gold-border {
-    border: 1px solid var(--border-subtle);
-  }
-
-  .card-glow {
+  .aion-card {
+    @apply rounded-2xl border border-white/8 bg-card;
     box-shadow:
-      0 10px 40px rgb(0 0 0 / 34%),
-      0 0 0 1px rgb(198 154 50 / 10%) inset,
-      inset 0 1px 0 rgb(255 255 255 / 5%);
+      0 8px 32px rgb(0 0 0 / 30%),
+      inset 0 1px 0 rgb(255 255 255 / 4%);
   }
 
-  .text-gradient-gold {
-    background: linear-gradient(120deg, #f1d79a 0%, #c9a84c 35%, #f5deb0 100%);
+  .aion-gradient-text {
+    background: linear-gradient(135deg, #a78bfa 0%, #f5b942 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
+  .aion-glow {
+    box-shadow:
+      0 0 60px rgb(124 58 237 / 20%),
+      0 0 40px rgb(245 185 66 / 10%);
+  }
+
   .surface-blur {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(12px);
   }
 }
 
