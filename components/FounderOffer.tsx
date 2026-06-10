@@ -29,6 +29,7 @@ type FormState = {
   phone: string;
   mainInterest: string;
   membershipInterest: string;
+  commentsOrQuestions: string;
 };
 
 const initialForm: FormState = {
@@ -37,6 +38,7 @@ const initialForm: FormState = {
   phone: "",
   mainInterest: "",
   membershipInterest: "",
+  commentsOrQuestions: "",
 };
 
 export function FounderOffer() {
@@ -62,12 +64,14 @@ export function FounderOffer() {
           phone: form.phone,
           main_interest: form.mainInterest,
           membership_interest: form.membershipInterest,
+          comments_or_questions: form.commentsOrQuestions,
           message: [
             `Name: ${form.name}`,
             `Email: ${form.email}`,
             `Phone: ${form.phone}`,
             `Main interest: ${form.mainInterest}`,
             `Membership interest: ${form.membershipInterest}`,
+            `Comments or questions: ${form.commentsOrQuestions || "None"}`,
           ].join("\n"),
         }),
       });
@@ -194,6 +198,17 @@ export function FounderOffer() {
                     </option>
                   ))}
                 </select>
+              </div>
+              <div>
+                <label htmlFor="commentsOrQuestions" className="mb-1.5 block text-sm font-medium">
+                  Comments or Questions
+                </label>
+                <textarea
+                  id="commentsOrQuestions"
+                  value={form.commentsOrQuestions}
+                  onChange={(e) => setForm({ ...form, commentsOrQuestions: e.target.value })}
+                  className="min-h-28 w-full resize-y rounded-xl border border-white/10 bg-aion-gray px-4 py-3 text-sm outline-none transition focus:border-aion-purple/50 focus:ring-2 focus:ring-aion-purple/20"
+                />
               </div>
 
               <Button type="submit" className="w-full" disabled={status === "loading"}>
