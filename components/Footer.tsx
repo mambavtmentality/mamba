@@ -19,6 +19,7 @@ export function Footer() {
             <p className="mb-3 text-xs uppercase tracking-[0.2em] text-aion-muted">Follow</p>
             <p className="text-sm text-aion-muted">Instagram - coming soon</p>
             <p className="text-sm text-aion-muted">Facebook - coming soon</p>
+            <p className="text-sm text-aion-muted">TikTok - coming soon</p>
           </div>
         </div>
         <p className="mt-10 border-t border-white/8 pt-6 text-center text-xs leading-relaxed text-aion-muted">
