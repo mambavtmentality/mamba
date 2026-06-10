@@ -9,6 +9,7 @@ type FoundingMemberPayload = {
 };
 
 const recipientEmail = "mambavtmentality@gmail.com";
+const siteUrl = "https://mamba-lac.vercel.app";
 
 export async function POST(request: Request) {
   try {
@@ -23,6 +24,8 @@ export async function POST(request: Request) {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        Origin: siteUrl,
+        Referer: `${siteUrl}/`,
       },
       body: JSON.stringify({
         _subject: "Mamba VT Founding Member Inquiry",
@@ -44,6 +47,18 @@ export async function POST(request: Request) {
 
     if (!formSubmitResponse.ok) {
       return NextResponse.json({ error: "Unable to send message" }, { status: 502 });
+    }
+
+    const formSubmitResult = (await formSubmitResponse.json()) as {
+      success?: boolean;
+      message?: string;
+    };
+
+    if (formSubmitResult.success === false) {
+      return NextResponse.json(
+        { error: formSubmitResult.message || "Unable to send message" },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ success: true });
