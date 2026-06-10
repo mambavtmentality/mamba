@@ -21,6 +21,7 @@ const mainInterests = [
 ];
 
 const membershipInterests = ["Recovery", "Performance", "Elite", "Just want updates"];
+const formSubmitEndpoint = "https://formsubmit.co/ajax/mambavtmentality@gmail.com";
 
 type FormState = {
   name: string;
@@ -47,13 +48,34 @@ export function FounderOffer() {
     setStatus("loading");
 
     try {
-      const response = await fetch("/api/founding-member", {
+      const response = await fetch(formSubmitEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "Mamba VT Founding Member Inquiry",
+          _template: "table",
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          main_interest: form.mainInterest,
+          membership_interest: form.membershipInterest,
+          message: [
+            `Name: ${form.name}`,
+            `Email: ${form.email}`,
+            `Phone: ${form.phone}`,
+            `Main interest: ${form.mainInterest}`,
+            `Membership interest: ${form.membershipInterest}`,
+          ].join("\n"),
+        }),
       });
 
       if (!response.ok) throw new Error("Submission failed");
+      const result = (await response.json()) as { success?: boolean };
+
+      if (result.success === false) throw new Error("Submission failed");
 
       setStatus("success");
       setForm(initialForm);
