@@ -8,6 +8,8 @@ type FoundingMemberPayload = {
   membershipInterest: string;
 };
 
+const recipientEmail = "mambavtmentality@gmail.com";
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as FoundingMemberPayload;
@@ -16,9 +18,33 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // TODO: Connect to email/CRM service (Resend, Formspree, HubSpot, Airtable, etc.)
-    // TODO: Send notification to studio owner and store lead in database
-    console.log("Founding member lead:", body);
+    const formSubmitResponse = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _subject: "Mamba VT Founding Member Inquiry",
+        _template: "table",
+        name: body.name,
+        email: body.email,
+        phone: body.phone,
+        main_interest: body.mainInterest,
+        membership_interest: body.membershipInterest,
+        message: [
+          `Name: ${body.name}`,
+          `Email: ${body.email}`,
+          `Phone: ${body.phone}`,
+          `Main interest: ${body.mainInterest}`,
+          `Membership interest: ${body.membershipInterest}`,
+        ].join("\n"),
+      }),
+    });
+
+    if (!formSubmitResponse.ok) {
+      return NextResponse.json({ error: "Unable to send message" }, { status: 502 });
+    }
 
     return NextResponse.json({ success: true });
   } catch {
