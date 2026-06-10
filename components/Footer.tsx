@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <p className="mb-3 text-xs uppercase tracking-[0.2em] text-aion-muted">Contact</p>
             <p className="text-sm text-aion-muted">mambavtmentality@gmail.com</p>
-            <p className="text-sm text-aion-muted">8022871788</p>
+            <p className="text-sm text-aion-muted">(802) 287 1788</p>
             <p className="text-sm text-aion-muted">Local studio - location coming soon</p>
           </div>
           <div>
