@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/Button";
-
 export function FounderSection() {
   return (
     <section id="founder" className="section-padding bg-aion-gray/30">
@@ -62,9 +60,6 @@ export function FounderSection() {
 
           <div className="space-y-4">
             <p className="font-semibold text-foreground">Win or learn. Stay ready. Keep moving forward.</p>
-            <Button href="/founder" variant="secondary">
-              Clinton&apos;s Story
-            </Button>
           </div>
         </div>
       </div>
