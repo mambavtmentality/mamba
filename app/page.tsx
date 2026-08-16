@@ -4,6 +4,7 @@ import { EquipmentGrid } from "@/components/EquipmentGrid";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { FounderOffer } from "@/components/FounderOffer";
+import { FounderSection } from "@/components/FounderSection";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { MembershipPreview } from "@/components/MembershipPreview";
@@ -19,6 +20,7 @@ export default function Home() {
       <EquipmentGrid />
       <MembershipPreview />
       <AudienceSection />
+      <FounderSection />
       <ValidationCTA />
       <FAQ />
       <Footer />
