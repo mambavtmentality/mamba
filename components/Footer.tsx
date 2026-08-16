@@ -20,6 +20,12 @@ export function Footer() {
             <p className="text-sm text-aion-muted">Instagram - coming soon</p>
             <p className="text-sm text-aion-muted">Facebook - coming soon</p>
             <p className="text-sm text-aion-muted">TikTok - coming soon</p>
+            <a
+              href="/mamba-painting"
+              className="mt-4 inline-block text-sm text-aion-muted underline decoration-white/20 underline-offset-4 transition hover:text-foreground"
+            >
+              Mamba Painting & Property Services
+            </a>
           </div>
         </div>
         <p className="mt-10 border-t border-white/8 pt-6 text-center text-xs leading-relaxed text-aion-muted">
