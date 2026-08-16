@@ -30,8 +30,8 @@ export function Header() {
           ))}
         </nav>
 
-        <Button href="#founder-offer" className="px-4 py-2 text-xs sm:text-sm">
-          Join Founding List
+        <Button href="/mamba-painting" className="px-4 py-2 text-xs sm:text-sm">
+          Visit Mamba Painting
         </Button>
       </div>
     </header>
