@@ -8,7 +8,7 @@ export function FounderSection() {
           <div className="relative flex aspect-[4/5] min-h-[420px] items-center justify-center overflow-hidden rounded-xl bg-[linear-gradient(145deg,rgba(124,58,237,0.28),rgba(20,20,23,0.95),rgba(245,185,66,0.16))]">
             <Image
               src="/founder/clinton-messiter.png"
-              alt="Clinton Messiter, founder of Mamba VT Mentality LLC"
+              alt="Clinton Messiter, founder of Aion Wellness"
               fill
               className="object-cover object-center"
               sizes="(max-width: 1024px) 100vw, 480px"
@@ -32,8 +32,8 @@ export function FounderSection() {
 
           <div className="space-y-4 text-sm leading-relaxed text-aion-muted md:text-base">
             <p>
-              Clinton Messiter is the founder of Mamba VT Mentality LLC, a Vermont-based company
-              built around three principles: Mindset. Discipline. Purpose.
+              Clinton Messiter is the founder of Aion Wellness, a Vermont-based wellness brand
+              built around guided performance, recovery, and disciplined personal growth.
             </p>
             <p>
               With a background in personal training, athletic performance, coaching, business, and
@@ -45,11 +45,11 @@ export function FounderSection() {
               understanding that lasting change does not happen overnight. It comes from
               consistently doing the work when nobody is watching.
             </p>
-            <p>That philosophy became Mamba VT Mentality.</p>
+            <p>That philosophy became Aion Wellness.</p>
             <p>
               Today, Clinton works with athletes and individuals through performance training,
-              fitness, coaching, and personal development while continuing to build Mamba VT into a
-              broader performance and wellness company.
+              fitness, coaching, and personal development while continuing to build Aion Wellness
+              into a broader performance and recovery company.
             </p>
           </div>
 
