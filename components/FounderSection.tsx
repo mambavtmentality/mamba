@@ -1,19 +1,19 @@
+import Image from "next/image";
+
 export function FounderSection() {
   return (
     <section id="founder" className="section-padding bg-aion-gray/30">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div className="aion-card relative overflow-hidden p-4">
           <div className="relative flex aspect-[4/5] min-h-[420px] items-center justify-center overflow-hidden rounded-xl bg-[linear-gradient(145deg,rgba(124,58,237,0.28),rgba(20,20,23,0.95),rgba(245,185,66,0.16))]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_18%,rgba(167,139,250,0.28),transparent_34%),radial-gradient(circle_at_76%_78%,rgba(245,185,66,0.18),transparent_32%)]" />
-            <div className="relative text-center">
-              <div className="mx-auto mb-5 flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-black/25 text-5xl font-bold tracking-tight aion-gradient-text">
-                CM
-              </div>
-              <p className="text-xs uppercase tracking-[0.28em] text-aion-yellow-soft">
-                Founder Photo
-              </p>
-              <p className="mt-2 text-sm text-aion-muted">Professional image placeholder</p>
-            </div>
+            <Image
+              src="/founder/clinton-messiter.png"
+              alt="Clinton Messiter, founder of Mamba VT Mentality LLC"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 480px"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
           </div>
         </div>
 
